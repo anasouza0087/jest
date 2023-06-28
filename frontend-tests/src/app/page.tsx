@@ -9,6 +9,7 @@ export default function Home() {
   const [inputValue, setInputValue] = useState('')
   const [display, setDisplay] = useState(false)
 
+
   return (
     <>
       <Grid container direction={"row"} spacing={1}>
@@ -22,11 +23,12 @@ export default function Home() {
         </Grid>
         <Grid item>
           <ButtonSearch
-            title="Ação"
             variant="contained"
             color="secondary"
             size="medium"
-            onClick={() => setDisplay(!display)}
+            onClick={() =>
+              setDisplay(!display)
+            }
           />
         </Grid>
       </Grid>

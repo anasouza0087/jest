@@ -1,10 +1,10 @@
 "use client"
 import { Button } from "@mui/material"
+import { useState } from "react"
 
 interface ButtonSearchType {
     variant: any
     color: any
-    title: any
     size: any
     onClick: any
 }
@@ -12,18 +12,22 @@ interface ButtonSearchType {
 const ButtonSearch = ({
     variant,
     color,
-    title,
     size,
     onClick
 }: ButtonSearchType) => {
+    const [updateTitle, setUpdateTitle] = useState('Ação')
+
     return (
         <Button
             variant={variant || 'contained'}
             color={color || 'secondary'}
             size={size || 'medium'}
-            onClick={onClick}
+            onClick={() => {
+                setUpdateTitle('Buscando')
+                onClick()
+            }}
         >
-            {title}
+            {updateTitle}
         </Button>
     )
 }
