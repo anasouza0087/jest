@@ -6,12 +6,14 @@ interface inputTextType {
     placeholder: string
     value: string | number
     onChange: (event: { target: { value: string } }) => void
+    name: string
 }
 
 const InputText = ({
     label,
     placeholder,
     value,
+    name,
     onChange
 }: inputTextType) => {
     return (
@@ -21,6 +23,7 @@ const InputText = ({
             value={value}
             onChange={onChange}
             size="small"
+            name={name}
         />
     )
 }

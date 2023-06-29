@@ -18,6 +18,7 @@ export default function Home() {
             label='Campo de texto'
             placeholder='Insira sua mensagem'
             value={inputValue}
+            name={'message'}
             onChange={(event: { target: { value: SetStateAction<string> } }) => setInputValue(event.target.value)}
           />
         </Grid>
